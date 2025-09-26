@@ -33,7 +33,10 @@ Install Cuda compatible pytorch<br />
 
 ## Testing
 Example test line:<br />
-python translate_video.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out<br />
-
+```
+python translate.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out<br />
+```
 With lip-sync<br />
-python translate_video.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out --do_lipsync
+```
+python translate.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out --do_lipsync
+```
