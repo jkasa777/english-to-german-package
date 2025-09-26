@@ -2,35 +2,38 @@
 This library translates the audio of a video from English to German, preserving the original speaker's voice and tone through voice cloning. The new audio is synchronized with the original video length and optionally lip-synced.
 
 ## Pipeline
--Load the video with MoviePy, extract the audio, and parse the SRT file
--Translate each line of the SRT
--Synthesize the German speech line-by-line through voice cloning
--Ensure original pauses persist
--Concatenate lines together into a full audio file
--Synchronize the German audio to the original video by adjusting its speed
--Accordingly scale the German SRT
--Write the new audio onto the video
--(Optionally) Lip sync the video to the new audio
+-Load the video with MoviePy, extract the audio, and parse the SRT file<br />
+-Translate each line of the SRT<br />
+-Synthesize the German speech line-by-line through voice cloning<br />
+-Ensure original pauses persist<br />
+-Concatenate lines together into a full audio file<br />
+-Synchronize the German audio to the original video by adjusting its speed<br />
+-Accordingly scale the German SRT<br />
+-Write the new audio onto the video<br />
+-(Optionally) Lip sync the video to the new audio<br />
 
 ## Assumptions
--SRT is accurate, with no overlaps
--Video has just one speaker
--No cuts in the video
+-SRT is accurate, with no overlaps<br />
+-Video has just one speaker<br />
+-No cuts in the video<br />
 
 ## Limitations
--Audio stretching distorts the tone
--Lip-sync library produces square artifacts around the lips
--Lip-sync only works on Google Colab
+-Audio stretching distorts the tone<br />
+-Lip-sync library produces square artifacts around the lips<br />
+-Lip-sync only works on Google Colab<br />
 
 ## Setup
 Set up Conda environment python==3.12
+```
 pip install -r req.txt
 conda install ffmpeg -c conda-forge
-Install Cuda compatible pytorch
+```
+Install Cuda compatible pytorch<br />
+
 
 ## Testing
-Example test line:
-python translate_video.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out
+Example test line:<br />
+python translate_video.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out<br />
 
-With lip-sync
+With lip-sync<br />
 python translate_video.py --video_file sample_video.mp4 --transcript_srt sample_en.srt --output_dir out --do_lipsync
