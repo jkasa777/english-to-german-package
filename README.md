@@ -18,7 +18,7 @@ This library translates the audio of a video from English to German, preserving 
 -No cuts in the video<br />
 
 ## Limitations
--Audio stretching distorts the tone<br />
+-Audio stretching slightly distorts the tone<br />
 -Lip-sync library produces square artifacts around the lips<br />
 -Lip-sync only works on Google Colab<br />
 
