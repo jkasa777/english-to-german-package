@@ -29,6 +29,7 @@ pip install -r req.txt
 conda install ffmpeg -c conda-forge
 ```
 Install Cuda compatible pytorch<br />
+Create an 'output' directory and a 'temp' directory
 
 
 ## Testing
